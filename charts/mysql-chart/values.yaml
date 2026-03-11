@@ -8,3 +8,8 @@ service:
   name: mysql-service
   type: ClusterIP
   port: 3306
+autoscaling:
+  enabled: false
+serviceAccount:
+  create: false
+  name: ""
