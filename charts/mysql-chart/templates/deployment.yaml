@@ -44,6 +44,11 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: {{ .Values.mysqlRootPassword | quote }}
+            - name: MYSQL_DATABASE
+              value: {{ .Values.mysqlDatabase | quote }}
           {{- with .Values.livenessProbe }}
           livenessProbe:
             {{- toYaml . | nindent 12 }}

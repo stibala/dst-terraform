@@ -1,4 +1,7 @@
 replicaCount: 1
+fullnameOverride: "mysql-service"
+mysqlRootPassword: "admin"
+mysqlDatabase: "wordpress"
 image:
   repository: mysql
   tag: "5.6"
